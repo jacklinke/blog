@@ -198,9 +198,9 @@ def toggle_preference(request):
         if successful_toggle:
             return HttpResponse(
                 (
-                    '<\div _="on load wait 2s then remove me" class="alert alert-success alert-dismissible fade show" role="alert">'
-                    "<\strong>Success! Your preferences were updated."
-                    "<\/div>"
+                    '<div _="on load wait 2s then remove me" class="alert alert-success alert-dismissible fade show" role="alert">'
+                    "<strong>Success! Your preferences were updated.</strong>"
+                    "</div>"
                 ),
                 status=200,
                 content_type="text/html",
@@ -209,16 +209,14 @@ def toggle_preference(request):
     # If we did not successfully toggle one of the preferences, notify the user of the failure
     return HttpResponse(
         (
-            '<\div _="on load wait 2s then remove me" class="alert alert-warning alert-dismissible fade show" role="alert">'
-            "<\strong>Warning! Preferences were not updated. Notify the webmaster."
-            "<\/div>"
+            '<div _="on load wait 2s then remove me" class="alert alert-warning alert-dismissible fade show" role="alert">'
+            "<strong>Warning! Preferences were not updated. Notify the webmaster.</strong>"
+            "</div>"
         ),
         status=200,
         content_type="text/html",
     )
 ```
-
-*Warning: remove the backslashes at the start of the each set of three HttpResponse lines. These were required for syntax highlighting, and are not intended to be part of the code.*
 
 In the view we are checking for the value of the *preference* hidden form field, and depending on whether it is *sms_msg* or *email_msg*, we set or unset the corresponding model field before returning a message the the user. Finally, if we did not toggle any of the preferences, we alert the user to the failure.
 
@@ -291,9 +289,9 @@ def select_order_notification_freq(request):
             else:
                 return HttpResponse(
                     (
-                        '<\div _="on load wait 2s then remove me" class="alert alert-warning" role="alert">'
-                        "<\strong>Warning! Preferences were not updated. Notify the webmaster."
-                        "<\/div>"
+                        '<div _="on load wait 2s then remove me" class="alert alert-warning" role="alert">'
+                        "<strong>Warning! Preferences were not updated. Notify the webmaster.</strong>"
+                        "</div>"
                     ),
                     status=200,
                     content_type="text/html",
@@ -304,16 +302,14 @@ def select_order_notification_freq(request):
 
     return HttpResponse(
         (
-            '<\div _="on load wait 2s then remove me" class="alert alert-success" role="alert">'
-            "<\strong>Success! Preferences were updated."
-            "<\/div>"
+            '<div _="on load wait 2s then remove me" class="alert alert-success" role="alert">'
+            "<strong>Success! Preferences were updated.</strong>"
+            "</div>"
         ),
         status=200,
         content_type="text/html",
     )
 ```
-
-*Warning: remove the backslashes at the start of the each set of three HttpResponse lines. These were required for syntax highlighting, and are not intended to be part of the code.*
 
 users/urls.py
 
