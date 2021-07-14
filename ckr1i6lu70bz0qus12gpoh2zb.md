@@ -1,7 +1,5 @@
 ## Ajax-Enabled Checkbox and Select with Django and HTMX
 
-*Republished from the original blog at the same domain*
-
 What we're going to build
 -------------------------
 
