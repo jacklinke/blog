@@ -1,8 +1,5 @@
 ## Cheatsheet for Django Models
 
-*Republished from the original blog at the same domain*
-
-
 Basic cheatsheet for django models
 ----------------------------------
 
