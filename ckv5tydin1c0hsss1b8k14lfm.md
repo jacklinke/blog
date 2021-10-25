@@ -1,4 +1,4 @@
-## Using DjHTML from the command line in Linux or in PyCharm
+## Standardize Django Template Indentation with DjHTML from Linux command line or PyCharm
 
 ## What is DjHTML?
 
@@ -8,7 +8,7 @@ It standardizes the indentation for  [Django](https://docs.djangoproject.com/en/
 
 In order to operate on multiple files or entire directories, we can use built-in tools to apply DjHTML to multiple files.
 
-This short guide assumes you are working with Linux. If you are working with a different operating system, it may get you started in the right direction.
+This short guide assumes you are working with Linux and that you have followed the [installation instructions](https://github.com/rtts/djhtml#installation) for DjHTML. If you are working with a different operating system, it may get you started in the right direction.
 
 ---
 
@@ -35,6 +35,48 @@ find . -name "*.html" | xargs djhtml -i
 ---
 
 ## Using DjHTML in PyCharm
+
+### Indent Whenever an HTML File Changes
+
+PyCharm has a  [file watcher](https://www.jetbrains.com/help/pycharm/using-file-watchers.html)  functionality that allows you to apply actions whenever a file changes and is saved. We can add a new File Watcher to automatically apply indentation when a changes are made to a file. 
+
+In order to identify the installed location of DjHTML, which you'll need below, use the following on the command-line:
+
+```bash
+whereis djhtml
+```
+
+To add the File Watcher, from the **File** menu in PyCharm select **Settings**. The **Settings** window will open with a hierarchical menu on the left side.
+
+Within that menu, navigate to **Tools** and select **File Watchers**.
+
+In the **File Watchers** panel, select the **+** button near the top and from the drop-down, select **< custom >**. The **Create File Watcher** dialog will open.
+
+You should be able to use the settings below.
+
+```text
+Name:              DjHTML
+File Type:         HTML
+Scope:             Project Files
+Program:           * Full path to your install of DjHTML *
+Arguments:         -i $FilePath$
+Output Paths:      $ProjectFileDir$
+```
+
+Be sure that "Trigger the watcher on external changes" is checked.
+
+It should look something like this:
+
+
+![Screenshot from 2021-10-24 20-31-17.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1635122785650/5tZo5ehzY.png)
+
+Click **Ok** on the **Create File Watcher** and **Settings** dialog windows.
+
+Any time you change an html file in your project and save it, DjHTML should automatically apply indentation.
+
+### Use External Tools to Apply Indentation as Needed
+
+ [External Tools](https://www.jetbrains.com/help/pycharm/configuring-third-party-tools.html)  in PyCharm makes it easy to apply actions from third-party tools (like DjHTML) to arbitrary files or directories of files in your project.
 
 From the **File** menu in PyCharm select **Settings**. The **Settings** window will open with a hierarchical menu on the left side.
 
