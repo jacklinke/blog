@@ -16,13 +16,13 @@ This short guide assumes you are working with Linux and that you have followed t
 
 Because DjHTML only takes action on a single file on its own, we need to combine a couple of built-in command line tools within Linux to use it with multiple files at once: `find`, `xargs`, and piping.
 
-The  [find](https://www.geeksforgeeks.org/find-command-in-linux-with-examples/)  command lets us search for files that meet certain criteria. In our case, we want to search within the current directory (and subdirectories) for any files that end in **.html**. The single period "**.**" in the example below tells the find command to search starting from the current directory. You can replace the period with any valid relative or absolute path.
+The  [find](https://www.geeksforgeeks.org/find-command-in-linux-with-examples/)  command lets us search for files that meet certain criteria. In our case, we want to search within the current directory (and any subdirectories) for all files that end in **.html**. The single period "**.**" in the example below tells the `find` command to search starting from the current directory. You can replace the period with any valid relative or absolute path.
 
-The `-name` argument of the `find` command is where we specify the criteria for the files we want returned by the command. Here, we use the wildcard "*****" to specify that we want *any* files that end in **.html**
+The `-name` argument of the `find` command is where we specify the criteria for the file names we want returned by the command. Here, we use the wildcard "*****" to specify that we want *any* files that end in **.html**
 
-We then use a  [pipe](https://www.geeksforgeeks.org/piping-in-unix-or-linux/)  "**|**", which redirects the output of one command, program, or process as input to another. Here, we are passing any files found by the `find` command to the `xargs` command for further processing.
+We then use a [pipe](https://www.geeksforgeeks.org/piping-in-unix-or-linux/) "**|**", which redirects the output of one command, program, or process as input to another. Here, we are passing any files found by the `find` command to the `xargs` command for further processing.
 
-The  [xargs](https://www.geeksforgeeks.org/xargs-command-unix/)  command allows you to build up and execute commands with arguments from standard input. Each output of the `find` command (each file that was 'found') will be passed as an argument to `xargs`, which will then apply `DjHTML` indentation to it.
+The [xargs](https://www.geeksforgeeks.org/xargs-command-unix/) command allows you to build up and execute commands with arguments from standard input. Each output of the `find` command (each file that was 'found') will be passed as an argument to `xargs`, which will then apply `DjHTML` indentation to it.
 
 Combining all of this, to apply DjHTML to all html files in the current directory, use the following:
 
@@ -30,7 +30,7 @@ Combining all of this, to apply DjHTML to all html files in the current director
 find . -name "*.html" | xargs djhtml -i
 ```
 
-*Take a look at  [this issue](https://github.com/rtts/djhtml/issues/13#issuecomment-842553382) on DjHTML's GitHub Issues and read through the links provided above on each command for more information.*
+*Take a look at [this issue](https://github.com/rtts/djhtml/issues/13#issuecomment-842553382) on DjHTML's GitHub Issues and read through the links provided above on each command for more information.*
 
 ---
 
@@ -38,7 +38,7 @@ find . -name "*.html" | xargs djhtml -i
 
 ### Indent Whenever an HTML File Changes
 
-PyCharm has a  [file watcher](https://www.jetbrains.com/help/pycharm/using-file-watchers.html)  functionality that allows you to apply actions whenever a file changes and is saved. We can add a new File Watcher to automatically apply indentation when a changes are made to a file. 
+PyCharm has a [file watcher](https://www.jetbrains.com/help/pycharm/using-file-watchers.html) functionality that allows you to apply actions whenever a file changes and is saved. We can add a new File Watcher to automatically apply indentation when a changes are made to a file. 
 
 In order to identify the installed location of DjHTML, which you'll need below, use the following on the command-line:
 
@@ -76,7 +76,7 @@ Any time you change an html file in your project and save it, DjHTML should auto
 
 ### Use External Tools to Apply Indentation as Needed
 
- [External Tools](https://www.jetbrains.com/help/pycharm/configuring-third-party-tools.html)  in PyCharm makes it easy to apply actions from third-party tools (like DjHTML) to arbitrary files or directories of files in your project.
+[External Tools](https://www.jetbrains.com/help/pycharm/configuring-third-party-tools.html) in PyCharm makes it easy to apply actions from third-party tools (like DjHTML) to arbitrary files or directories of files in your project.
 
 From the **File** menu in PyCharm select **Settings**. The **Settings** window will open with a hierarchical menu on the left side.
 
