@@ -12,9 +12,9 @@ This short guide assumes you are working with Linux and that you have followed t
 
 ---
 
-## Using DjHTML from the command line
+## Using DjHTML on a directory of templates from the command line
 
-Because DjHTML only takes action on a single file on its own, we need to combine a couple of built-in command line tools within Linux: `find`, `xargs`, and piping.
+Because DjHTML only takes action on a single file on its own, we need to combine a couple of built-in command line tools within Linux to use it with multiple files at once: `find`, `xargs`, and piping.
 
 The  [find](https://www.geeksforgeeks.org/find-command-in-linux-with-examples/)  command lets us search for files that meet certain criteria. In our case, we want to search within the current directory (and subdirectories) for any files that end in **.html**. The single period "**.**" in the example below tells the find command to search starting from the current directory. You can replace the period with any valid relative or absolute path.
 
