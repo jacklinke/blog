@@ -1,1 +1,364 @@
-IyMgQWpheC1FbmFibGVkIENoZWNrYm94IGFuZCBTZWxlY3Qgd2l0aCBEamFuZ28gYW5kIEhUTVgKCgoKCldoYXQgd2UncmUgZ29pbmcgdG8gYnVpbGQKLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQoKV2Ugd2FudCB0byBhbGxvdyB1c2VycyB0byBzZXQgcHJlZmVyZW5jZXMgb24gdGhlaXIgcHJvZmlsZSBwYWdlLiBXZSB3aWxsIGxvb2sgYXQgdHdvIGVsZW1lbnRzIHVzZWQgZm9yIGJhc2ljIHNldHRpbmdzIC0tIENoZWNrYm94ZXMgYW5kIFNlbGVjdHMuCgpUcmFkaXRpb25hbGx5IHRoZXJlIGFyZSB0d28gYXBwcm9hY2hlcyB0byBzZXR0aW5ncyBsaWtlIHRoZXNlIC0tIERqYW5nbyBmb3JtcyBvciB0cmFkaXRpb25hbCBIVE1MIGZvcm1zIC0tIGJvdGggdXN1YWxseSByZXF1aXJpbmcgYSBmdWxsIHBhZ2UgcmVsb2FkIG9yIGN1c3RvbSBKYXZhU2NyaXB0IHRvIHBvc3QgdGhlIHZhbHVlcyB2aWEgQWpheC4KCldlbGwuLi4gd2Ugd2FudCB0aGUgYmVuZWZpdHMgb2YgQWpheCBmb3JtIHN1Ym1pc3Npb25zICp3aXRob3V0KiB0aGUgcGFpbiBvZiB3cml0aW5nIGEgYnVuY2ggb2YgSmF2YVNjcmlwdC4KCgohW0ZpbmFsIFJlc3VsdCAtIFVzZXIgcHJlZmVyZW5jZXNdKGh0dHBzOi8vY2RuLmhhc2hub2RlLmNvbS9yZXMvaGFzaG5vZGUvaW1hZ2UvdXBsb2FkL3YxNjI2MTQ2Nzg1Nzg5L2cyZWtDamhUVS5wbmcpCgpCYWNrZ3JvdW5kCi0tLS0tLS0tLS0KCltodG14XShodHRwczovL2h0bXgub3JnLykgaXMgYSBuZXcgcGxheWVyIGluIHRvd24uIFRoZSBzdWNjZXNzb3IgdG8gW0ludGVyY29vbGVyIEpTXShodHRwczovL2ludGVyY29vbGVyanMub3JnLyksIGh0bXggcHJvbWlzZXMgdG8gYWxsb3cgeW91IHRvICJhY2Nlc3MgW0FKQVhdKGh0dHBzOi8vaHRteC5vcmcvZG9jcyNhamF4KSwgW0NTUyBUcmFuc2l0aW9uc10oaHR0cHM6Ly9odG14Lm9yZy9kb2NzI2Nzc190cmFuc2l0aW9ucyksIFtXZWJTb2NrZXRzXShodHRwczovL2h0bXgub3JnL2RvY3Mjd2Vic29ja2V0cykgYW5kIFtTZXJ2ZXIgU2VudCBFdmVudHNdKGh0dHBzOi8vaHRteC5vcmcvZG9jcyNzc2UpIGRpcmVjdGx5IGluIEhUTUwsIHVzaW5nIFthdHRyaWJ1dGVzXShodHRwczovL2h0bXgub3JnL3JlZmVyZW5jZSNhdHRyaWJ1dGVzKSwgc28geW91IGNhbiBidWlsZCBbbW9kZXJuIHVzZXIgaW50ZXJmYWNlc10oaHR0cHM6Ly9odG14Lm9yZy9leGFtcGxlcykgd2l0aCB0aGUgW3NpbXBsaWNpdHldKGh0dHBzOi8vZW4ud2lraXBlZGlhLm9yZy93aWtpL0hBVEVPQVMpIGFuZCBbcG93ZXJdKGh0dHBzOi8vd3d3Lmljcy51Y2kuZWR1L35maWVsZGluZy9wdWJzL2Rpc3NlcnRhdGlvbi9yZXN0X2FyY2hfc3R5bGUuaHRtKSBvZiBoeXBlcnRleHQiLltdKGh0dHBzOi8vaW50ZXJjb29sZXJqcy5vcmcvKQoKV2UncmUgZ29pbmcgdG8gdXRpbGl6ZSBodG14IHRvIGltcGxlbWVudCBzb21lIHVzZXIgc2V0dGluZ3MgdXNpbmcgY2hlY2tib3hlcyBmb3IgYm9vbGVhbiB2YWx1ZXMgYW5kIHNlbGVjdCBib3hlcyBmb3IgY2hvaWNlcy4gVGhpcyBpcyBzb21ldGhpbmcgdGhhdCBtaWdodCBiZSB1c2VkIG9uIGEgdXNlcidzIHBlcnNvbmFsIHNldHRpbmdzIHBhZ2UgdG8gYWxsb3cgdGhlbSB0byBjaGFuZ2UgdmFsdWVzIGVhc2lseS4gSW4gdGhpcyBleGFtcGxlLCB1c2VycyBjYW4gc2VsZWN0IHdoZXRoZXIgdGhleSB3YW50IHRvIHJlY2VpdmUgbWVzc2FnZXMgKG1heWJlIGZyb20gdGhlIHN5c3RlbSBhZG1pbmlzdHJhdG9yIG9yIGZyb20gb3RoZXIgdXNlcnM/KSB2aWEgZW1haWwgYW5kL29yIFNNUywgYW5kIGFsc28gaG93IG9mdGVuIG5vdGlmaWNhdGlvbnMgYWJvdXQgdGhlaXIgb3JkZXJzIHNob3VsZCBiZSBzZW50LiBXZSBhcmUgb25seSBpbXBsZW1lbnRpbmcgdGhlIHByZWZlcmVuY2Ugc2VsZWN0aW9ucyBoZXJlLCBub3QgdGhlIG1lc3NhZ2luZy9ub3RpZmljYXRpb25zL29yZGVyIHRvb2xpbmcgdGhhdCB3b3VsZCBiYWNrIHRoZXNlIHVwLiBUaGlzIGV4YW1wbGUgYWxzbyBkb2VzIG5vdCBjb25jZXJuIGl0c2VsZiB3aXRoIHNlY3VyaXR5LgoKVGhpcyBhcnRpY2xlIGFzc3VtZXMgeW91IGFscmVhZHkga25vdyB0aGUgYmFzaWNzIG9mIGRqYW5nby4gSWYgbm90LCBjaGVjayBvdXQgW3RoZXNlIGdyZWF0IHJlc291cmNlc10oaHR0cHM6Ly93d3cucmVkZGl0LmNvbS9yL2RqYW5nb2xlYXJuaW5nL3dpa2kvaW5kZXgpIHRvIGdldCBzdGFydGVkLgoKSXQgYWxzbyBhc3N1bWVzIHlvdXIgcHJvamVjdCBoYXMgYSBbY3VzdG9tIFVzZXIgbW9kZWxdKGh0dHBzOi8vZG9jcy5kamFuZ29wcm9qZWN0LmNvbS9lbi8zLjEvdG9waWNzL2F1dGgvY3VzdG9taXppbmcvI2EtZnVsbC1leGFtcGxlKSAtLSBzb21ldGhpbmcgdGhhdCdzIGhpZ2hseSByZWNvbW1lbmRlZCBmb3IgKmV2ZXJ5KiBkamFuZ28gcHJvamVjdC4KClVzZXIgTW9kZWwKLS0tLS0tLS0tLQoKV2Ugc3RhcnQgd2l0aCBhIGJhc2ljIHVzZXIgbW9kZWwsIGFkZGluZyB0aGUgZm9sbG93aW5nIG5ldyBmaWVsZHM6Cgp1c2Vycy9tb2RlbHMucHkKCmBgYHB5dGhvbgogY2xhc3MgVXNlcihBYnN0cmFjdEJhc2VVc2VyKToKCiAgICAjIC4uLiBJZ25vcmluZyBleGlzdGluZyBmaWVsZHMgLi4uCgogICAgcmVjZWl2ZV9lbWFpbF9tZXNzYWdlcyA9IG1vZGVscy5Cb29sZWFuRmllbGQoCiAgICAgICAgXygiUmVjZWl2ZSBFbWFpbCBNZXNzYWdlcyIpLAogICAgICAgIGRlZmF1bHQ9RmFsc2UsCiAgICApCgogICAgcmVjZWl2ZV9zbXNfbWVzc2FnZXMgPSBtb2RlbHMuQm9vbGVhbkZpZWxkKAogICAgICAgIF8oIlJlY2VpdmUgU01TIE1lc3NhZ2VzIiksCiAgICAgICAgZGVmYXVsdD1GYWxzZSwKICAgICkKCiAgICBjbGFzcyBOb3RpZmljYXRpb25DaG9pY2VzKG1vZGVscy5UZXh0Q2hvaWNlcyk6CiAgICAgICAgTk9ORSA9ICJOT05FIiwgXygiTm9uZSIpCiAgICAgICAgSU1NRURJQVRFID0gIklNTUVESUFURSIsIF8oIkltbWVkaWF0ZWx5IikKICAgICAgICBEQUlMWSA9ICJEQUlMWSIsIF8oIkRhaWx5IEFyY2hpdmUiKQogICAgICAgIFdFRUtMWSA9ICJXRUVLTFkiLCBfKCJXZWVrbHkgQXJjaGl2ZSIpCgogICAgb3JkZXJfbm90aWZpY2F0aW9uX2ZyZXEgPSBtb2RlbHMuQ2hhckZpZWxkKAogICAgICAgIG1heF9sZW5ndGg9OSwKICAgICAgICBjaG9pY2VzPU5vdGlmaWNhdGlvbkNob2ljZXMuY2hvaWNlcywKICAgICAgICBkZWZhdWx0PU5vdGlmaWNhdGlvbkNob2ljZXMuTk9ORSwKICAgICAgICBoZWxwX3RleHQ9XygKICAgICAgICAgICAgIkhvdyBvZnRlbiBkbyB5b3Ugd2FudCB0byByZWNlaXZlIG5vdGlmaWNhdGlvbnMgYWJvdXQgeW91ciBvcmRlcnM/IgogICAgICAgICksCiAgICApCmBgYAoKQmFzaWMgVGVtcGxhdGUKLS0tLS0tLS0tLS0tLS0KClRoZSBmb2xsb3dpbmcgYmFzaWMgdGVtcGxhdGUgZ2l2ZXMgdXMgQm9vdHN0cmFwLCBodG14LCBhbmQgXF9IeXBlcnNjcmlwdC4gV2Ugd2lsbCBmaWxsIGluIHRoZSBjb250ZW50cyBvZiB0aGUgaW5uZXIgZGl2IGFzIHdlIGdvIGFsb25nLiBXZSBhbHNvIGFkZCBhIGJhc2ljIHZpZXcgYW5kIHVybCB0byBkaXNwbGF5IHRoZSBwcmVmZXJlbmNlcy4gWW91IHdvbid0IHNlZSBtdWNoIHlldCBpZiB5b3UgbmF2aWdhdGUgdG8gdGhpcyB1cmwuCgpwcmVmZXJlbmNlcy5odG1sCgpgYGBodG1sCjwhZG9jdHlwZSBodG1sPgoKPGh0bWwgbGFuZz0iZW4iPgogICAgPGhlYWQ+CiAgICAgICAgPHRpdGxlPlVzZXIgUHJlZmVyZW5jZXM8L3RpdGxlPgoKICAgICAgICA8bGluayByZWw9InN0eWxlc2hlZXQiIGhyZWY9Imh0dHBzOi8vc3RhY2twYXRoLmJvb3RzdHJhcGNkbi5jb20vYm9vdHN0cmFwLzQuMS4zL2Nzcy9ib290c3RyYXAubWluLmNzcyIgaW50ZWdyaXR5PSJzaGEzODQtTUN3OTgvU0ZuR0U4ZkpUM0dYd0VPbmdzVjdadDI3TlhGb2FvQXBtWW04MWl1WG9Qa0ZPSndKOEVSZGtuTFBNTyIgY3Jvc3NvcmlnaW49ImFub255bW91cyI+CgogICAgPC9oZWFkPgoKICAgIDxib2R5PgogICAgICAgIDxzY3JpcHQgc3JjPSJodHRwczovL3VucGtnLmNvbS9odG14Lm9yZ0AxLjMuMyI+PC9zY3JpcHQ+CiAgICAgICAgPHNjcmlwdCBzcmM9Imh0dHBzOi8vdW5wa2cuY29tL2h5cGVyc2NyaXB0Lm9yZ0AwLjAuOSI+PC9zY3JpcHQ+CiAgICAgICAgPGgzPlVzZXIgUHJlZmVyZW5jZXM8L2gzPgogICAgICAgIDxkaXYgY2xhc3M9InJvdyBtLTUiPgogICAgICAgICAgICA8IS0tIENvbnRlbnQgd2lsbCBiZSBhZGRlZCBoZXJlIC0tPgogICAgICAgIDwvZGl2PgoKICAgICAgICA8c2NyaXB0IHNyYz0iaHR0cHM6Ly9jb2RlLmpxdWVyeS5jb20vanF1ZXJ5LTMuMy4xLnNsaW0ubWluLmpzIiBpbnRlZ3JpdHk9InNoYTM4NC1xOGkvWCs5NjVEek8wclQ3YWJLNDFKU3RRSUFxVmdSVnpwYnpvNXNtWEtwNFlmUnZIKzhhYnRURTFQaTZqaXpvIiBjcm9zc29yaWdpbj0iYW5vbnltb3VzIj48L3NjcmlwdD4KICAgICAgICA8c2NyaXB0IHNyYz0iaHR0cHM6Ly9jZG5qcy5jbG91ZGZsYXJlLmNvbS9hamF4L2xpYnMvcG9wcGVyLmpzLzEuMTQuMy91bWQvcG9wcGVyLm1pbi5qcyIgaW50ZWdyaXR5PSJzaGEzODQtWk1QN3JWbzNtSXlrVisyKzlKM1VKNDZqQmswV0xhVUFkbjY4OWFDd29xYkJKaVNuakFLL2w4V3ZDV1BJUG00OSIgY3Jvc3NvcmlnaW49ImFub255bW91cyI+PC9zY3JpcHQ+CiAgICAgICAgPHNjcmlwdCBzcmM9Imh0dHBzOi8vc3RhY2twYXRoLmJvb3RzdHJhcGNkbi5jb20vYm9vdHN0cmFwLzQuMS4zL2pzL2Jvb3RzdHJhcC5taW4uanMiIGludGVncml0eT0ic2hhMzg0LUNoZnFxeHVaVUNuSlNLMytNWG1QTkl5RTZaYldoMklNcUUyNDFyWWlxSnh5TWlaNk9XL0ptWlE1c3R3RVVMVHkiIGNyb3Nzb3JpZ2luPSJhbm9ueW1vdXMiPjwvc2NyaXB0PgogICAgPC9ib2R5Pgo8L2h0bWw+CmBgYAoKdXNlcnMvdXJscy5weQoKYGBgcHl0aG9uCmltcG9ydCBsb2dnaW5nCmZyb20gZGphbmdvLnVybHMgaW1wb3J0IHBhdGgKCmZyb20gdXNlcnMgaW1wb3J0IHZpZXdzCgphcHBfbmFtZSA9ICJ1c2VycyIKdXJscGF0dGVybnMgPSBbCiAgICBwYXRoKCJwcmVmZXJlbmNlcy8iLCB2aWV3cy5wcmVmZXJlbmNlcywgbmFtZT0icHJlZmVyZW5jZXMiKSwKXQpgYGAKCnVzZXJzL3ZpZXdzLnB5CgpgYGBweXRob24KZnJvbSBkamFuZ28uY29udHJpYi5hdXRoIGltcG9ydCBnZXRfdXNlcl9tb2RlbApmcm9tIGRqYW5nby5jb250cmliLmF1dGguZGVjb3JhdG9ycyBpbXBvcnQgbG9naW5fcmVxdWlyZWQKZnJvbSBkamFuZ28uaHR0cCBpbXBvcnQgSHR0cFJlc3BvbnNlCmZyb20gZGphbmdvLnNob3J0Y3V0cyBpbXBvcnQgcmVuZGVyCmZyb20gZGphbmdvLnZpZXdzLmdlbmVyaWMgaW1wb3J0IFRlbXBsYXRlVmlldwoKVXNlciA9IGdldF91c2VyX21vZGVsKCkKCkBsb2dpbl9yZXF1aXJlZApkZWYgcHJlZmVyZW5jZXMocmVxdWVzdCk6CiAgICByZXR1cm4gcmVuZGVyKHJlcXVlc3QsICJ1c2Vycy9wcmVmZXJlbmNlcy5odG1sIikKYGBgCgpUb2dnbGUgUHJlZmVyZW5jZXMKLS0tLS0tLS0tLS0tLS0tLS0tCgpMZXQncyBzdGFydCB3aXRoIHRoZSBtZXNzYWdpbmcgcHJlZmVyZW5jZXMuIFdlIHdpbGwgaGF2ZSB0d28gY2hlY2tib3hlcyB0aGF0IGFsbG93IHVzIHRvIHNldCBvciB1bi1zZXQgdGhlICpVc2VyLnJlY2VpdmVfZW1haWxfbWVzc2FnZXMqIGFuZCAqVXNlci5yZWNlaXZlX3Ntc19tZXNzYWdlcyogbW9kZWwgZmllbGRzLiBBZGRpdGlvbmFsbHksIHdlJ2xsIGFkZCBhbiBhbGVydCBkaXYgdG8gbm90aWZ5IHRoZSB1c2VyIHdoZXRoZXIgdGhlIHByb2Nlc3Mgd2FzIHN1Y2Nlc3NmdWwgb3Igbm90LCBhbmQgd2Ugd2lsbCBtYWtlIGl0IGRpc2FwcGVhciBhZnRlciAyIHNlY29uZHMgdXNpbmcgW19oeXBlcnNjcmlwdF0oaHR0cHM6Ly9oeXBlcnNjcmlwdC5vcmcvKS4KClRoZXJlIGFyZSBzZXZlcmFsIHdheXMgdG8gYXBwcm9hY2ggdGhpcy4gV2UgY291bGQgaGF2ZSBhIHNlcGFyYXRlIHZpZXcgYW5kIHVybCBmb3IgZXZlcnkgY2hlY2tib3ggd2Ugd2FudCB0byB0b2dnbGUuIEkgaGF2ZSBvcHRlZCBpbnN0ZWFkIHRvIGhhdmUgb25lIHZpZXcgYW5kIHVybCB0aGF0IGhhbmRsZXMgYWxsIHRvZ2dsZXMuIERlcGVuZGluZyBvbiB0aGUgdmFsdWUgb2YgdGhlICpwcmVmZXJlbmNlKiBoaWRkZW4gZm9ybSBmaWVsZCwgdGhlIHZpZXcgZGV0ZXJtaW5lcyB3aGljaCBwcmVmZXJlbmNlIHdhcyBzdWJtaXR0ZWQuCgpJbnNlcnQgdGhlIGZvbGxvd2luZyBpbnRvIHRoZSBpbm5lciA8ZGl2PiBvZiBvdXIgcHJlZmVyZW5jZXMuaHRtbCB0ZW1wbGF0ZS4KCmBgYGh0bWwKPGRpdiBjbGFzcz0iY3VzdG9tLWNvbnRyb2wgY3VzdG9tLXN3aXRjaCBjb2wtbGctMyBtdC0zIG1iLTEiPgogICAgPGZvcm0gbWV0aG9kPSJQT1NUIj4KCiAgICAgICAgPGlucHV0IHR5cGU9ImNoZWNrYm94IgogICAgICAgICAgICAgICBjbGFzcz0iZm9ybS1jaGVjay1pbnB1dCIKICAgICAgICAgICAgICAgeyUgaWYgcmVxdWVzdC51c2VyLnJlY2VpdmVfZW1haWxfbWVzc2FnZXMgPT0gVHJ1ZSAlfWNoZWNrZWR7JSBlbmRpZiAlfQogICAgICAgICAgICAgICBuYW1lPSJzZXRfdmFsdWUiCiAgICAgICAgICAgICAgIGlkPSJzZXRfZW1haWxfdmFsdWUiCiAgICAgICAgICAgICAgIGh4LXBvc3Q9InslIHVybCAndXNlcnM6dG9nZ2xlX3ByZWZlcmVuY2UnICV9IgogICAgICAgICAgICAgICBoeC10cmlnZ2VyPSJjbGljayIKICAgICAgICAgICAgICAgaHgtdGFyZ2V0PSIjZW1haWxfcmVzcG9uc2UiPgoKICAgICAgICA8bGFiZWwgY2xhc3M9ImZvcm0tY2hlY2stbGFiZWwiIGZvcj0ic2V0X2VtYWlsX3ZhbHVlIj5SZWNlaXZlIEVtYWlsIE1lc3NhZ2VzPC9sYWJlbD4KICAgICAgICA8aW5wdXQgdHlwZT0iaGlkZGVuIiBuYW1lPSJwcmVmZXJlbmNlIiB2YWx1ZT0iZW1haWxfbXNnIj4KICAgICAgICB7JSBjc3JmX3Rva2VuICV9CiAgICA8L2Zvcm0+CiAgICA8ZGl2IGlkPSJlbWFpbF9yZXNwb25zZSI+PC9kaXY+CjwvZGl2Pgo8ZGl2IGNsYXNzPSJjdXN0b20tY29udHJvbCBjdXN0b20tc3dpdGNoIGNvbC1sZy0zIG10LTMgbWItMiI+CiAgICA8Zm9ybSBtZXRob2Q9IlBPU1QiPgoKICAgICAgICA8aW5wdXQgdHlwZT0iY2hlY2tib3giCiAgICAgICAgICAgICAgIGNsYXNzPSJmb3JtLWNoZWNrLWlucHV0IgogICAgICAgICAgICAgICB7JSBpZiByZXF1ZXN0LnVzZXIucmVjZWl2ZV9zbXNfbWVzc2FnZXMgPT0gVHJ1ZSAlfWNoZWNrZWR7JSBlbmRpZiAlfQogICAgICAgICAgICAgICBuYW1lPSJzZXRfdmFsdWUiCiAgICAgICAgICAgICAgIGlkPSJzZXRfc21zX3ZhbHVlIgogICAgICAgICAgICAgICBoeC1wb3N0PSJ7JSB1cmwgJ3VzZXJzOnRvZ2dsZV9wcmVmZXJlbmNlJyAlfSIKICAgICAgICAgICAgICAgaHgtdHJpZ2dlcj0iY2xpY2siCiAgICAgICAgICAgICAgIGh4LXRhcmdldD0iI3Ntc19yZXNwb25zZSI+CgogICAgICAgIDxsYWJlbCBjbGFzcz0iZm9ybS1jaGVjay1sYWJlbCIgZm9yPSJzZXRfc21zX3ZhbHVlIj5SZWNlaXZlIFNNUyBNZXNzYWdlczwvbGFiZWw+CiAgICAgICAgPGlucHV0IHR5cGU9ImhpZGRlbiIgbmFtZT0icHJlZmVyZW5jZSIgdmFsdWU9InNtc19tc2ciPgogICAgICAgIHslIGNzcmZfdG9rZW4gJX0KICAgIDwvZm9ybT4KICAgIDxkaXYgaWQ9InNtc19yZXNwb25zZSI+PC9kaXY+CjwvZGl2PgpgYGAKClRoaXMgaXMgcHJldHR5IHN0YW5kYXJkIHN0dWZmLCBleGNlcHQgZm9yIHRoZSBodG14IGF0dHJpYnV0ZXMgaW4gdGhlIDxpbnB1dD4gdGFncy4gU3BlY2lmaWNhbGx5OgoKYGBgaHRtbApoeC1wb3N0PSJ7JSB1cmwgInVzZXJzOnRvZ2dsZV9wcmVmZXJlbmNlIiAlfSIKaHgtdHJpZ2dlcj0iY2xpY2siCmh4LXRhcmdldD0iI2VtYWlsX3Jlc3BvbnNlIgpgYGAKIFRoaXMgdHJhbnNsYXRlcyB0byBvbi1jbGljayBwb3N0IHRoZSBmb3JtIGNvbnRlbnRzIHRvICp1c2Vyczp0b2dnbGVfcHJlZmVyZW5jZSogdXJsIGFuZCBwdXQgYW55dGhpbmcgcmV0dXJuZWQgZnJvbSB0aGF0IFVSTCB0byB0aGUgaHRtbCB0YWcgd2l0aCBhbiBpZCBvZiAqZW1haWxfcmVzcG9uc2UqLgoKTGV0J3MgYWRkIHRoZSB2aWV3IGFuZCBVUkwgdGhhdCB3aWxsIGFsbG93IHVzZSBvZiB0aGlzIGNodW5rIG9mIHRoZSB0ZW1wbGF0ZS4KCnVzZXJzL3ZpZXdzLnB5IChjb250aW51ZWQpCgpgYGBweXRob24KQGxvZ2luX3JlcXVpcmVkCmRlZiB0b2dnbGVfcHJlZmVyZW5jZShyZXF1ZXN0KToKICAgIGlmIHJlcXVlc3QubWV0aG9kID09ICJQT1NUIjoKICAgICAgICB1c2VyID0gcmVxdWVzdC51c2VyCiAgICAgICAgc3VjY2Vzc2Z1bF90b2dnbGUgPSBGYWxzZQoKICAgICAgICAjIFNldC91bi1zZXQgZW1haWwgbWVzc2FnaW5nIHByZWZlcmVuY2UKICAgICAgICBpZiAocmVxdWVzdC5QT1NULmdldCgicHJlZmVyZW5jZSIsIE5vbmUpID09ICJlbWFpbF9tc2ciKToKICAgICAgICAgICAgaWYgcmVxdWVzdC5QT1NULmdldCgic2V0X3ZhbHVlIiwgTm9uZSkgaXMgbm90IE5vbmU6CiAgICAgICAgICAgICAgICB1c2VyLnJlY2VpdmVfZW1haWxfbWVzc2FnZXMgPSBUcnVlCiAgICAgICAgICAgICAgICB1c2VyLnNhdmUoKQogICAgICAgICAgICAgICAgc3VjY2Vzc2Z1bF90b2dnbGUgPSBUcnVlCiAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICB1c2VyLnJlY2VpdmVfZW1haWxfbWVzc2FnZXMgPSBGYWxzZQogICAgICAgICAgICAgICAgdXNlci5zYXZlKCkKICAgICAgICAgICAgICAgIHN1Y2Nlc3NmdWxfdG9nZ2xlID0gVHJ1ZQoKICAgICAgICAjIFNldC91bi1zZXQgc21zIG1lc3NhZ2luZyBwcmVmZXJlbmNlCiAgICAgICAgaWYgKHJlcXVlc3QuUE9TVC5nZXQoInByZWZlcmVuY2UiLCBOb25lKSA9PSAic21zX21zZyIpOgogICAgICAgICAgICBpZiByZXF1ZXN0LlBPU1QuZ2V0KCJzZXRfdmFsdWUiLCBOb25lKSBpcyBub3QgTm9uZToKICAgICAgICAgICAgICAgIHVzZXIucmVjZWl2ZV9zbXNfbWVzc2FnZXMgPSBUcnVlCiAgICAgICAgICAgICAgICB1c2VyLnNhdmUoKQogICAgICAgICAgICAgICAgc3VjY2Vzc2Z1bF90b2dnbGUgPSBUcnVlCiAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICB1c2VyLnJlY2VpdmVfc21zX21lc3NhZ2VzID0gRmFsc2UKICAgICAgICAgICAgICAgIHVzZXIuc2F2ZSgpCiAgICAgICAgICAgICAgICBzdWNjZXNzZnVsX3RvZ2dsZSA9IFRydWUKCiAgICAgICAgaWYgc3VjY2Vzc2Z1bF90b2dnbGU6CiAgICAgICAgICAgIHJldHVybiBIdHRwUmVzcG9uc2UoCiAgICAgICAgICAgICAgICAoCiAgICAgICAgICAgICAgICAgICAgJzxkaXYgXz0ib24gbG9hZCB3YWl0IDJzIHRoZW4gcmVtb3ZlIG1lIiBjbGFzcz0iYWxlcnQgYWxlcnQtc3VjY2VzcyBhbGVydC1kaXNtaXNzaWJsZSBmYWRlIHNob3ciIHJvbGU9ImFsZXJ0Ij4nCiAgICAgICAgICAgICAgICAgICAgIjxzdHJvbmc+U3VjY2VzcyEgWW91ciBwcmVmZXJlbmNlcyB3ZXJlIHVwZGF0ZWQuPC9zdHJvbmc+IgogICAgICAgICAgICAgICAgICAgICI8L2Rpdj4iCiAgICAgICAgICAgICAgICApLAogICAgICAgICAgICAgICAgc3RhdHVzPTIwMCwKICAgICAgICAgICAgICAgIGNvbnRlbnRfdHlwZT0idGV4dC9odG1sIiwKICAgICAgICAgICAgKQoKICAgICMgSWYgd2UgZGlkIG5vdCBzdWNjZXNzZnVsbHkgdG9nZ2xlIG9uZSBvZiB0aGUgcHJlZmVyZW5jZXMsIG5vdGlmeSB0aGUgdXNlciBvZiB0aGUgZmFpbHVyZQogICAgcmV0dXJuIEh0dHBSZXNwb25zZSgKICAgICAgICAoCiAgICAgICAgICAgICc8ZGl2IF89Im9uIGxvYWQgd2FpdCAycyB0aGVuIHJlbW92ZSBtZSIgY2xhc3M9ImFsZXJ0IGFsZXJ0LXdhcm5pbmcgYWxlcnQtZGlzbWlzc2libGUgZmFkZSBzaG93IiByb2xlPSJhbGVydCI+JwogICAgICAgICAgICAiPHN0cm9uZz5XYXJuaW5nISBQcmVmZXJlbmNlcyB3ZXJlIG5vdCB1cGRhdGVkLiBOb3RpZnkgdGhlIHdlYm1hc3Rlci48L3N0cm9uZz4iCiAgICAgICAgICAgICI8L2Rpdj4iCiAgICAgICAgKSwKICAgICAgICBzdGF0dXM9MjAwLAogICAgICAgIGNvbnRlbnRfdHlwZT0idGV4dC9odG1sIiwKICAgICkKYGBgCgpJbiB0aGUgdmlldyB3ZSBhcmUgY2hlY2tpbmcgZm9yIHRoZSB2YWx1ZSBvZiB0aGUgKnByZWZlcmVuY2UqIGhpZGRlbiBmb3JtIGZpZWxkLCBhbmQgZGVwZW5kaW5nIG9uIHdoZXRoZXIgaXQgaXMgKnNtc19tc2cqIG9yICplbWFpbF9tc2cqLCB3ZSBzZXQgb3IgdW5zZXQgdGhlIGNvcnJlc3BvbmRpbmcgbW9kZWwgZmllbGQgYmVmb3JlIHJldHVybmluZyBhIG1lc3NhZ2UgdGhlIHRoZSB1c2VyLiBGaW5hbGx5LCBpZiB3ZSBkaWQgbm90IHRvZ2dsZSBhbnkgb2YgdGhlIHByZWZlcmVuY2VzLCB3ZSBhbGVydCB0aGUgdXNlciB0byB0aGUgZmFpbHVyZS4KCnVzZXJzL3VybHMucHkKCmBgYHB5dGhvbgppbXBvcnQgbG9nZ2luZwpmcm9tIGRqYW5nby51cmxzIGltcG9ydCBwYXRoCgpmcm9tIHVzZXJzIGltcG9ydCB2aWV3cwoKYXBwX25hbWUgPSAidXNlcnMiCnVybHBhdHRlcm5zID0gWwogICAgcGF0aCgicHJlZmVyZW5jZXMvIiwgdmlld3MucHJlZmVyZW5jZXMsIG5hbWU9InByZWZlcmVuY2VzIiksCiAgICBwYXRoKCJwcmVmZXJlbmNlcy90b2dnbGVfcHJlZmVyZW5jZS8iLCB2aWV3cy50b2dnbGVfcHJlZmVyZW5jZSwgbmFtZT0idG9nZ2xlX3ByZWZlcmVuY2UiKSwKXQpgYGAKCkF0IHRoaXMgcG9pbnQgeW91IHNob3VsZCBiZSBhYmxlIHRvIGdvIHRvIHRoZSB1c2VyIHByZWZlcmVuY2VzIHBhZ2UgYW5kIHNlZSB0aGUgdHdvIHRvZ2dsZSBwcmVmZXJlbmNlcy4KCgohW3ByZWZlcmVuY2VzIHdpdGggc3dhcCB0b2dnbGUgc3VjY2Vzc10oaHR0cHM6Ly9jZG4uaGFzaG5vZGUuY29tL3Jlcy9oYXNobm9kZS9pbWFnZS91cGxvYWQvdjE2MjYxNDY4MzA0ODcvR1ZueVVSeUhuLnBuZykKClNlbGVjdCBQcmVmZXJlbmNlcwotLS0tLS0tLS0tLS0tLS0tLS0KClRoaXMgdGltZSwgaW5zdGVhZCBvZiB0b2dnbGVzL2NoZWNrYm94ZXMsIHdlIHdhbnQgdGhlIHVzZXIgdG8gc2VsZWN0IGZyb20gbXVsdGlwbGUgY2hvaWNlcyBmb3IgdGhlIGZyZXF1ZW5jeSBvZiBvcmRlciBub3RpZmljYXRpb25zLiBJZiB5b3UgbG9vayBiYWNrIGF0IG91dCBVc2VyIG1vZGVsIHlvdSB3aWxsIHNlZSB0aGF0IHdlIGhhdmUgYSBOb3RpZmljYXRpb25DaG9pY2VzIGNsYXNzIHdpdGggNCBvcHRpb25zLgoKQXBwZW5kIHRoZSBmb2xsb3dpbmcgaW1tZWRpYXRlbHkgYWZ0ZXIgdGhlIGNvbnRlbnQgd2UgYWRkZWQgZm9yIHRoZSB0b2dnbGUgcHJlZmVyZW5jZXM6CgpwcmVmZXJlbmNlcy5odG1sCgpgYGBodG1sCjxkaXYgY2xhc3M9ImNvbC1sZy02IG1iLTEiPgogICAgPGZvcm0gbWV0aG9kPSJQT1NUIj4KICAgICAgICA8bGFiZWwgY2xhc3M9ImZvcm0tbGFiZWwiIGZvcj0ib3JkZXJfbm90aWZ5Ij5PcmRlciBOb3RpZmljYXRpb24gRnJlcXVlbmN5PC9sYWJlbD4KCiAgICAgICAgPHNlbGVjdCBjbGFzcz0iZm9ybS1jb250cm9sIgogICAgICAgICAgICAgICAgbmFtZT0ib3JkZXJfbm90aWZ5IgogICAgICAgICAgICAgICAgaWQ9Im9yZGVyX25vdGlmeSIKICAgICAgICAgICAgICAgIGh4LXBvc3Q9InslIHVybCAndXNlcnM6c2VsZWN0X29yZGVyX25vdGlmaWNhdGlvbl9mcmVxJyAlfSIKICAgICAgICAgICAgICAgIGh4LXRyaWdnZXI9ImNoYW5nZSIKICAgICAgICAgICAgICAgIGh4LXRhcmdldD0iI25vdGlmaWNhdGlvbl9yZXNwb25zZSI+CgogICAgICAgICAgICA8b3B0aW9uIHZhbHVlPSJOT05FIiB7JSBpZiB1c2VyLm9yZGVyX25vdGlmaWNhdGlvbl9mcmVxID09ICJOT05FIiAlfXNlbGVjdGVkeyUgZW5kaWYgJX0+Tm9uZTwvb3B0aW9uPgogICAgICAgICAgICA8b3B0aW9uIHZhbHVlPSJJTU1FRElBVEUiIHslIGlmIHVzZXIub3JkZXJfbm90aWZpY2F0aW9uX2ZyZXEgPT0gIklNTUVESUFURSIgJX1zZWxlY3RlZHslIGVuZGlmICV9PkltbWVkaWF0ZTwvb3B0aW9uPgogICAgICAgICAgICA8b3B0aW9uIHZhbHVlPSJEQUlMWSIgeyUgaWYgdXNlci5vcmRlcl9ub3RpZmljYXRpb25fZnJlcSA9PSAiREFJTFkiICV9c2VsZWN0ZWR7JSBlbmRpZiAlfT5EYWlseTwvb3B0aW9uPgogICAgICAgICAgICA8b3B0aW9uIHZhbHVlPSJXRUVLTFkiIHslIGlmIHVzZXIub3JkZXJfbm90aWZpY2F0aW9uX2ZyZXEgPT0gIldFRUtMWSIgJX1zZWxlY3RlZHslIGVuZGlmICV9PldlZWtseTwvb3B0aW9uPgogICAgICAgIDwvc2VsZWN0PgogICAgICAgIHslIGNzcmZfdG9rZW4gJX0KICAgIDwvZm9ybT4KICAgIDxkaXYgaWQ9Im5vdGlmaWNhdGlvbl9yZXNwb25zZSI+PC9kaXY+CjwvZGl2PgpgYGAKCkxpa2UgYmVmb3JlLCBpdCdzIHByZXR0eSBzdGFuZGFyZC4gSSBtYW51YWxseSBhZGRlZCB0aGUgb3B0aW9ucyBmb3IgdGhlIDxzZWxlY3Q+IGhlcmUsIGJ1dCB5b3UgY291bGQgYWxzbyBlYXNpbHkgcHVsbCB0aGUgdmFsdWVzIGZyb20gdGhlICpVc2VyLk5vdGlmaWNhdGlvbkNob2ljZXMqIGNsYXNzIGFuZCBhZGQgdGhpcyBhcyBjb250ZXh0IGluIHRoZSB2aWV3IHRvIG1ha2UgdGhpbmdzIG1vcmUgZHluYW1pYyBhbmQgZWFzaWVyIHRvIGNoYW5nZSBsYXRlciBvbi4KCkhlcmUgb3VyIGh0bXggYXR0cmlidXRlcyBhcmUgc2F5aW5nLi4uCgoqT24tY2hhbmdlKiwgcG9zdCB0aGUgZm9ybSBjb250ZW50cyB0byAqdXNlcnM6c2VsZWN0X29yZGVyX25vdGlmaWNhdGlvbl9mcmVxKiBhbmQgcmVwbGFjZSB0aGUgSFRNTCBlbGVtZW50IG9mICppZD1ub3RpZmljYXRpb25fcmVzcG9uc2UqIHdpdGggd2hhdGV2ZXIgaXMgcmV0dXJuZWQgZnJvbSB0aGUgdmlldy4KCk5vdyB0byBhZGQgdGhlIHZpZXcgYW5kIHVybC4KCnVzZXJzL3ZpZXdzLnB5CgpgYGBweXRob24KQGxvZ2luX3JlcXVpcmVkCmRlZiBzZWxlY3Rfb3JkZXJfbm90aWZpY2F0aW9uX2ZyZXEocmVxdWVzdCk6CiAgICBpZiByZXF1ZXN0Lm1ldGhvZCA9PSAiUE9TVCI6CiAgICAgICAgdXNlciA9IHJlcXVlc3QudXNlcgogICAgICAgIG9yZGVyX25vdGlmeSA9IHJlcXVlc3QuUE9TVC5nZXQoIm9yZGVyX25vdGlmeSIsIE5vbmUpCgogICAgICAgIGlmIG9yZGVyX25vdGlmeSBpcyBub3QgTm9uZToKICAgICAgICAgICAgaWYgb3JkZXJfbm90aWZ5IGluIFVzZXIuTm90aWZpY2F0aW9uQ2hvaWNlcy52YWx1ZXM6CiAgICAgICAgICAgICAgICB1c2VyLm9yZGVyX25vdGlmaWNhdGlvbl9mcmVxID0gb3JkZXJfbm90aWZ5CiAgICAgICAgICAgICAgICB1c2VyLnNhdmUoKQogICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgcmV0dXJuIEh0dHBSZXNwb25zZSgKICAgICAgICAgICAgICAgICAgICAoCiAgICAgICAgICAgICAgICAgICAgICAgICc8ZGl2IF89Im9uIGxvYWQgd2FpdCAycyB0aGVuIHJlbW92ZSBtZSIgY2xhc3M9ImFsZXJ0IGFsZXJ0LXdhcm5pbmciIHJvbGU9ImFsZXJ0Ij4nCiAgICAgICAgICAgICAgICAgICAgICAgICI8c3Ryb25nPldhcm5pbmchIFByZWZlcmVuY2VzIHdlcmUgbm90IHVwZGF0ZWQuIE5vdGlmeSB0aGUgd2VibWFzdGVyLjwvc3Ryb25nPiIKICAgICAgICAgICAgICAgICAgICAgICAgIjwvZGl2PiIKICAgICAgICAgICAgICAgICAgICApLAogICAgICAgICAgICAgICAgICAgIHN0YXR1cz0yMDAsCiAgICAgICAgICAgICAgICAgICAgY29udGVudF90eXBlPSJ0ZXh0L2h0bWwiLAogICAgICAgICAgICAgICAgKQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIHVzZXIub3JkZXJfbm90aWZpY2F0aW9uX2ZyZXEgPSBVc2VyLk5vdGlmaWNhdGlvbkNob2ljZXMuTk9ORQogICAgICAgICAgICB1c2VyLnNhdmUoKQoKICAgIHJldHVybiBIdHRwUmVzcG9uc2UoCiAgICAgICAgKAogICAgICAgICAgICAnPGRpdiBfPSJvbiBsb2FkIHdhaXQgMnMgdGhlbiByZW1vdmUgbWUiIGNsYXNzPSJhbGVydCBhbGVydC1zdWNjZXNzIiByb2xlPSJhbGVydCI+JwogICAgICAgICAgICAiPHN0cm9uZz5TdWNjZXNzISBQcmVmZXJlbmNlcyB3ZXJlIHVwZGF0ZWQuPC9zdHJvbmc+IgogICAgICAgICAgICAiPC9kaXY+IgogICAgICAgICksCiAgICAgICAgc3RhdHVzPTIwMCwKICAgICAgICBjb250ZW50X3R5cGU9InRleHQvaHRtbCIsCiAgICApCmBgYAoKdXNlcnMvdXJscy5weQoKYGBgcHl0aG9uCmltcG9ydCBsb2dnaW5nCmZyb20gZGphbmdvLnVybHMgaW1wb3J0IHBhdGgKCmZyb20gdXNlcnMgaW1wb3J0IHZpZXdzCgphcHBfbmFtZSA9ICJ1c2VycyIKdXJscGF0dGVybnMgPSBbCiAgICBwYXRoKCJwcmVmZXJlbmNlcy8iLCB2aWV3cy5wcmVmZXJlbmNlcywgbmFtZT0icHJlZmVyZW5jZXMiKSwKICAgIHBhdGgoInByZWZlcmVuY2VzL3RvZ2dsZV9wcmVmZXJlbmNlLyIsIHZpZXdzLnRvZ2dsZV9wcmVmZXJlbmNlLCBuYW1lPSJ0b2dnbGVfcHJlZmVyZW5jZSIpLAogICAgcGF0aCgicHJlZmVyZW5jZXMvc2VsZWN0X29yZGVyX25vdGlmaWNhdGlvbl9mcmVxLyIsIHZpZXdzLnNlbGVjdF9vcmRlcl9ub3RpZmljYXRpb25fZnJlcSwgbmFtZT0ic2VsZWN0X29yZGVyX25vdGlmaWNhdGlvbl9mcmVxIiksCl0KYGBgCgpDb25jbHVzaW9uCi0tLS0tLS0tLS0KCkF0IHRoaXMgcG9pbnQsIGJvdGggdHlwZSBvZiBwcmVmZXJlbmNlcyAodG9nZ2xlIGFuZCBzZWxlY3QpIHNob3VsZCB3b3JrLiBFYWNoIHRpbWUgYSBjaGFuZ2UgaXMgbWFkZSwgYW4gYWxlcnQgc2hvdWxkIHBvcCB1cCBsZXR0aW5nIHlvdSBrbm93IHRoZSBzdGF0dXMgb2YgdGhhdCBjaGFuZ2UuIElmIHlvdSBtYWtlIGEgY2hhbmdlIGFuZCByZWZyZXNoIHRoZSBwYWdlLCB0aGUgdXBkYXRlZCB2YWx1ZSBzaG91bGQgcmVtYWluLgoKVGhlIGZ1bGwgY29kZSBmb3IgdGhlIGZpbGVzIG1lbnRpb25lZCBoZXJlIGNhbiBiZSBmb3VuZCBhdCA8aHR0cHM6Ly9naXN0LmdpdGh1Yi5jb20vT21lbkFwcHMvYjc2NjM4Mjg3Mjg2YTQ3NWEzNjQwNGU5MTk2NThjZTE+
+# Ajax-Enabled Checkbox and Select with Django and HTMX
+
+
+
+
+What we're going to build
+-------------------------
+
+We want to allow users to set preferences on their profile page. We will look at two elements used for basic settings -- Checkboxes and Selects.
+
+Traditionally there are two approaches to settings like these -- Django forms or traditional HTML forms -- both usually requiring a full page reload or custom JavaScript to post the values via Ajax.
+
+Well... we want the benefits of Ajax form submissions *without* the pain of writing a bunch of JavaScript.
+
+
+![Final Result - User preferences](https://cdn.hashnode.com/res/hashnode/image/upload/v1626146785789/g2ekCjhTU.png)
+
+Background
+----------
+
+[htmx](https://htmx.org/) is a new player in town. The successor to [Intercooler JS](https://intercoolerjs.org/), htmx promises to allow you to "access [AJAX](https://htmx.org/docs#ajax), [CSS Transitions](https://htmx.org/docs#css_transitions), [WebSockets](https://htmx.org/docs#websockets) and [Server Sent Events](https://htmx.org/docs#sse) directly in HTML, using [attributes](https://htmx.org/reference#attributes), so you can build [modern user interfaces](https://htmx.org/examples) with the [simplicity](https://en.wikipedia.org/wiki/HATEOAS) and [power](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm) of hypertext".[](https://intercoolerjs.org/)
+
+We're going to utilize htmx to implement some user settings using checkboxes for boolean values and select boxes for choices. This is something that might be used on a user's personal settings page to allow them to change values easily. In this example, users can select whether they want to receive messages (maybe from the system administrator or from other users?) via email and/or SMS, and also how often notifications about their orders should be sent. We are only implementing the preference selections here, not the messaging/notifications/order tooling that would back these up. This example also does not concern itself with security.
+
+This article assumes you already know the basics of django. If not, check out [these great resources](https://www.reddit.com/r/djangolearning/wiki/index) to get started.
+
+It also assumes your project has a [custom User model](https://docs.djangoproject.com/en/3.1/topics/auth/customizing/#a-full-example) -- something that's highly recommended for *every* django project.
+
+User Model
+----------
+
+We start with a basic user model, adding the following new fields:
+
+users/models.py
+
+```python
+ class User(AbstractBaseUser):
+
+    # ... Ignoring existing fields ...
+
+    receive_email_messages = models.BooleanField(
+        _("Receive Email Messages"),
+        default=False,
+    )
+
+    receive_sms_messages = models.BooleanField(
+        _("Receive SMS Messages"),
+        default=False,
+    )
+
+    class NotificationChoices(models.TextChoices):
+        NONE = "NONE", _("None")
+        IMMEDIATE = "IMMEDIATE", _("Immediately")
+        DAILY = "DAILY", _("Daily Archive")
+        WEEKLY = "WEEKLY", _("Weekly Archive")
+
+    order_notification_freq = models.CharField(
+        max_length=9,
+        choices=NotificationChoices.choices,
+        default=NotificationChoices.NONE,
+        help_text=_(
+            "How often do you want to receive notifications about your orders?"
+        ),
+    )
+```
+
+Basic Template
+--------------
+
+The following basic template gives us Bootstrap, htmx, and \_Hyperscript. We will fill in the contents of the inner div as we go along. We also add a basic view and url to display the preferences. You won't see much yet if you navigate to this url.
+
+preferences.html
+
+```html
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <title>User Preferences</title>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    </head>
+
+    <body>
+        <script src="https://unpkg.com/htmx.org@1.3.3"></script>
+        <script src="https://unpkg.com/hyperscript.org@0.0.9"></script>
+        <h3>User Preferences</h3>
+        <div class="row m-5">
+            <!-- Content will be added here -->
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body>
+</html>
+```
+
+users/urls.py
+
+```python
+import logging
+from django.urls import path
+
+from users import views
+
+app_name = "users"
+urlpatterns = [
+    path("preferences/", views.preferences, name="preferences"),
+]
+```
+
+users/views.py
+
+```python
+from django.contrib.auth import get_user_model
+from django.contrib.auth.decorators import login_required
+from django.http import HttpResponse
+from django.shortcuts import render
+from django.views.generic import TemplateView
+
+User = get_user_model()
+
+@login_required
+def preferences(request):
+    return render(request, "users/preferences.html")
+```
+
+Toggle Preferences
+------------------
+
+Let's start with the messaging preferences. We will have two checkboxes that allow us to set or un-set the *User.receive_email_messages* and *User.receive_sms_messages* model fields. Additionally, we'll add an alert div to notify the user whether the process was successful or not, and we will make it disappear after 2 seconds using [_hyperscript](https://hyperscript.org/).
+
+There are several ways to approach this. We could have a separate view and url for every checkbox we want to toggle. I have opted instead to have one view and url that handles all toggles. Depending on the value of the *preference* hidden form field, the view determines which preference was submitted.
+
+Insert the following into the inner <div> of our preferences.html template.
+
+```html
+<div class="custom-control custom-switch col-lg-3 mt-3 mb-1">
+    <form method="POST">
+
+        <input type="checkbox"
+               class="form-check-input"
+               {% if request.user.receive_email_messages == True %}checked{% endif %}
+               name="set_value"
+               id="set_email_value"
+               hx-post="{% url 'users:toggle_preference' %}"
+               hx-trigger="click"
+               hx-target="#email_response">
+
+        <label class="form-check-label" for="set_email_value">Receive Email Messages</label>
+        <input type="hidden" name="preference" value="email_msg">
+        {% csrf_token %}
+    </form>
+    <div id="email_response"></div>
+</div>
+<div class="custom-control custom-switch col-lg-3 mt-3 mb-2">
+    <form method="POST">
+
+        <input type="checkbox"
+               class="form-check-input"
+               {% if request.user.receive_sms_messages == True %}checked{% endif %}
+               name="set_value"
+               id="set_sms_value"
+               hx-post="{% url 'users:toggle_preference' %}"
+               hx-trigger="click"
+               hx-target="#sms_response">
+
+        <label class="form-check-label" for="set_sms_value">Receive SMS Messages</label>
+        <input type="hidden" name="preference" value="sms_msg">
+        {% csrf_token %}
+    </form>
+    <div id="sms_response"></div>
+</div>
+```
+
+This is pretty standard stuff, except for the htmx attributes in the <input> tags. Specifically:
+
+```html
+hx-post="{% url "users:toggle_preference" %}"
+hx-trigger="click"
+hx-target="#email_response"
+```
+ This translates to on-click post the form contents to *users:toggle_preference* url and put anything returned from that URL to the html tag with an id of *email_response*.
+
+Let's add the view and URL that will allow use of this chunk of the template.
+
+users/views.py (continued)
+
+```python
+@login_required
+def toggle_preference(request):
+    if request.method == "POST":
+        user = request.user
+        successful_toggle = False
+
+        # Set/un-set email messaging preference
+        if (request.POST.get("preference", None) == "email_msg"):
+            if request.POST.get("set_value", None) is not None:
+                user.receive_email_messages = True
+                user.save()
+                successful_toggle = True
+            else:
+                user.receive_email_messages = False
+                user.save()
+                successful_toggle = True
+
+        # Set/un-set sms messaging preference
+        if (request.POST.get("preference", None) == "sms_msg"):
+            if request.POST.get("set_value", None) is not None:
+                user.receive_sms_messages = True
+                user.save()
+                successful_toggle = True
+            else:
+                user.receive_sms_messages = False
+                user.save()
+                successful_toggle = True
+
+        if successful_toggle:
+            return HttpResponse(
+                (
+                    '<div _="on load wait 2s then remove me" class="alert alert-success alert-dismissible fade show" role="alert">'
+                    "<strong>Success! Your preferences were updated.</strong>"
+                    "</div>"
+                ),
+                status=200,
+                content_type="text/html",
+            )
+
+    # If we did not successfully toggle one of the preferences, notify the user of the failure
+    return HttpResponse(
+        (
+            '<div _="on load wait 2s then remove me" class="alert alert-warning alert-dismissible fade show" role="alert">'
+            "<strong>Warning! Preferences were not updated. Notify the webmaster.</strong>"
+            "</div>"
+        ),
+        status=200,
+        content_type="text/html",
+    )
+```
+
+In the view we are checking for the value of the *preference* hidden form field, and depending on whether it is *sms_msg* or *email_msg*, we set or unset the corresponding model field before returning a message the the user. Finally, if we did not toggle any of the preferences, we alert the user to the failure.
+
+users/urls.py
+
+```python
+import logging
+from django.urls import path
+
+from users import views
+
+app_name = "users"
+urlpatterns = [
+    path("preferences/", views.preferences, name="preferences"),
+    path("preferences/toggle_preference/", views.toggle_preference, name="toggle_preference"),
+]
+```
+
+At this point you should be able to go to the user preferences page and see the two toggle preferences.
+
+
+![preferences with swap toggle success](https://cdn.hashnode.com/res/hashnode/image/upload/v1626146830487/GVnyURyHn.png)
+
+Select Preferences
+------------------
+
+This time, instead of toggles/checkboxes, we want the user to select from multiple choices for the frequency of order notifications. If you look back at out User model you will see that we have a NotificationChoices class with 4 options.
+
+Append the following immediately after the content we added for the toggle preferences:
+
+preferences.html
+
+```html
+<div class="col-lg-6 mb-1">
+    <form method="POST">
+        <label class="form-label" for="order_notify">Order Notification Frequency</label>
+
+        <select class="form-control"
+                name="order_notify"
+                id="order_notify"
+                hx-post="{% url 'users:select_order_notification_freq' %}"
+                hx-trigger="change"
+                hx-target="#notification_response">
+
+            <option value="NONE" {% if user.order_notification_freq == "NONE" %}selected{% endif %}>None</option>
+            <option value="IMMEDIATE" {% if user.order_notification_freq == "IMMEDIATE" %}selected{% endif %}>Immediate</option>
+            <option value="DAILY" {% if user.order_notification_freq == "DAILY" %}selected{% endif %}>Daily</option>
+            <option value="WEEKLY" {% if user.order_notification_freq == "WEEKLY" %}selected{% endif %}>Weekly</option>
+        </select>
+        {% csrf_token %}
+    </form>
+    <div id="notification_response"></div>
+</div>
+```
+
+Like before, it's pretty standard. I manually added the options for the <select> here, but you could also easily pull the values from the *User.NotificationChoices* class and add this as context in the view to make things more dynamic and easier to change later on.
+
+Here our htmx attributes are saying...
+
+*On-change*, post the form contents to *users:select_order_notification_freq* and replace the HTML element of *id=notification_response* with whatever is returned from the view.
+
+Now to add the view and url.
+
+users/views.py
+
+```python
+@login_required
+def select_order_notification_freq(request):
+    if request.method == "POST":
+        user = request.user
+        order_notify = request.POST.get("order_notify", None)
+
+        if order_notify is not None:
+            if order_notify in User.NotificationChoices.values:
+                user.order_notification_freq = order_notify
+                user.save()
+            else:
+                return HttpResponse(
+                    (
+                        '<div _="on load wait 2s then remove me" class="alert alert-warning" role="alert">'
+                        "<strong>Warning! Preferences were not updated. Notify the webmaster.</strong>"
+                        "</div>"
+                    ),
+                    status=200,
+                    content_type="text/html",
+                )
+        else:
+            user.order_notification_freq = User.NotificationChoices.NONE
+            user.save()
+
+    return HttpResponse(
+        (
+            '<div _="on load wait 2s then remove me" class="alert alert-success" role="alert">'
+            "<strong>Success! Preferences were updated.</strong>"
+            "</div>"
+        ),
+        status=200,
+        content_type="text/html",
+    )
+```
+
+users/urls.py
+
+```python
+import logging
+from django.urls import path
+
+from users import views
+
+app_name = "users"
+urlpatterns = [
+    path("preferences/", views.preferences, name="preferences"),
+    path("preferences/toggle_preference/", views.toggle_preference, name="toggle_preference"),
+    path("preferences/select_order_notification_freq/", views.select_order_notification_freq, name="select_order_notification_freq"),
+]
+```
+
+Conclusion
+----------
+
+At this point, both type of preferences (toggle and select) should work. Each time a change is made, an alert should pop up letting you know the status of that change. If you make a change and refresh the page, the updated value should remain.
+
+The full code for the files mentioned here can be found at <https://gist.github.com/OmenApps/b76638287286a475a36404e919658ce1>
