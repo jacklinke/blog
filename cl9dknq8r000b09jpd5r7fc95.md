@@ -338,3 +338,5 @@ Simon Willison
 
 - GitHub Projects v2 is something to look into - brings all of your Issues together
 
+Simon's notes on this talk can be found at: https://github.com/simonw/djangocon-2022-productivity
+
