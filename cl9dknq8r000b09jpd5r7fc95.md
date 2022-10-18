@@ -34,7 +34,7 @@ They both have faced struggles and challenges, personally and professionally.
 - Shout-outs from the speakers
 	- **Marlene Mhangami** - Diversity Chair, PSF
 	- **Naomi Ceder** - Trans*Code
-	- **Iqbal Adbullah** - Organizer in SE Asia
+	- **Iqbal Abdullah** - Organizer in SE Asia
 - Uplift other folks - If I have a way to assist with training/opportunities, share with folks in need
 - When you're the swimmer, don't try to stay afloat by holding others down
 - Code of Conduct is how we care for everybody in the community
