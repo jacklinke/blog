@@ -312,9 +312,10 @@ Simon Willison
 		- Screenshots. Animated screenshots are even better
 		- When you close an issue add a link to the relevant docs and documentation
 
-- Issues are Temporal Documentation
+- Issues are Temporal Documentation, and can be used to document personal progress, research, and ideas justas you might for professional work.
 	- Time-stamped and contextual
 	- Nobody will be upset if you don't update this form of documentation in the future
+    - Simon wrote about [his trick for moving issues from a private repo to a public repo](https://til.simonwillison.net/github/transfer-issue-private-to-public)\*, which is not something you can accomplish by default. This is particularly nice if you are writing 
 
 - You can quickly pick projects back up later, even if you forgot them completely
 	- You don't have to remember anything
@@ -336,3 +337,4 @@ Simon Willison
 		- If we have documented and tested projects, we can live guilt-free about pausing/not committing 'enough' time to them each
 
 - GitHub Projects v2 is something to look into - brings all of your Issues together
+
