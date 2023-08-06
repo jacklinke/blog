@@ -3,6 +3,7 @@ title: "Alternatives to BooleanField in Django"
 datePublished: Sun Aug 06 2023 04:45:56 GMT+0000 (Coordinated Universal Time)
 cuid: clkyynq4i00070ajuauvt65pc
 slug: alternatives-to-booleanfield-in-django
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1691297251897/47f1c9a2-d547-448b-98a8-7040e16bb27f.png
 ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1691297129589/a94bd848-d41c-407f-b7ae-34f3ef85717f.png
 tags: django, database, state-management, models
 
