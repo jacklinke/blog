@@ -139,18 +139,18 @@ Use...
 class Notifications(models.Model):
     # Some fields...
 
-    viewed = models.DateTimeField(null=True, black=True)
+    viewed = models.DateTimeField(null=True, blank=True)
 ```
 
-When the action or event takes place, set the field to [`timezone.now()`](https://docs.djangoproject.com/en/4.2/ref/utils/#django.utils.timezone.now).
+When the action or event takes place (e.g., the Notification is viewed), set the field's value to [`timezone.now()`](https://docs.djangoproject.com/en/4.2/ref/utils/#django.utils.timezone.now).
 
-This tiny change means that we can now
+This tiny change to the model means that we can now:
 
 * Show the user whether the Notification was read
     
 * List all read Notifications
     
-* Show the user when the Notification was read
+* Show the user *when* the Notification was read
     
 * List all Notifications read within the last week
     
@@ -161,23 +161,23 @@ This tiny change means that we can now
 * etc.
     
 
-With BooleanField, we could only perform the first two of those queries. Being able to query *when* events took place can easily add value to your end users, and can make it easier for you to audit activities and usage.
+With BooleanField, we could only perform the first two of those queries. Being able to query *when* events took place can easily add value to your end users, and can make it easier for you to audit activities and usage within your project.
 
 ---
 
 ## When to use BooleanField?
 
-BoleanField does have its use-cases. Here is where I would still use them:
+BooleanField does have its use-cases. Here is where I would still use them:
 
 * To determine whether a model instance **is** *something* or **can be used for** *something*, and it does not make sense to track when this state came to be. For instance, if we want to track whether an `Asset` is a spare part, we might use `is_spares = models.BooleanField(default=False)` Another example is whether the `Asset` can be checked out: `can_be_checked_out = models.BooleanField(default=True)`. This use-case is *squishy*. It can be hard to tell when we might be better off tracking when these fields change or when simply keeping it to true or false is more appropriate.
     
-* When we are using the field as a setting that does not have state or a particular occurrence time. Usually this is when setting a value for a model instance that is not expected to change (or at least not often). I use these for configuring tenants in one of my projects. For instance, `allow_tenant_to_place_orders = models.BooleanField(default=True)`. Here I do not care about when the decision to allow or disallow this tenant from placing orders took place, and there is no other state this decision might transition to. The tenant either **can** or **cannot** place orders, and that's it.
+* When we are using the field as a setting that does not have state or a particular occurrence time. Usually, this is when setting a value for a model instance that is not expected to change (or at least not often). I use these for configuring tenants in one of my projects. For instance, `allow_tenant_to_place_orders = models.BooleanField(default=True)`. Here I do not care about when the decision to allow or disallow this tenant from placing orders took place, and there is no other state this decision might transition to. The tenant either **can** or **cannot** place orders, and that's it.
     
 
 ---
 
 ## Conclusion
 
-Hopefully some of you find these notes helpful. BooleanFields have their uses, but they are often over-used. The alternatives mentioned above can help to prevent spaghetti code as the number of potential statuses increase or help to add value when you may need to track when actions in your project took place.
+Hopefully, some of you find these notes helpful. BooleanField has its uses, but it is often over-used. The alternatives mentioned above can help to prevent spaghetti code as the number of potential statuses increase or help to add value when you may need to track when actions in your project took place.
 
 Have thoughts or questions about these ideas? I would love to hear them 🙂
