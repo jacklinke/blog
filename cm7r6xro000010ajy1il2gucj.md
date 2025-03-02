@@ -6,6 +6,7 @@ datePublished: Sun Mar 02 2025 05:28:46 GMT+0000 (Coordinated Universal Time)
 cuid: cm7r6xro000010ajy1il2gucj
 slug: give-the-credit-take-the-blame-fight-for-your-people
 cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/5x4U6InVXpc/upload/c0ac9ee27669ef43e5b9bcc6f34bc8e8.jpeg
+ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1740894061975/18940a7d-ed0a-45a9-812d-eaf18d760b48.jpeg
 tags: team, leadership, trust, advocate, responsibility, leading, character
 
 ---
